@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>神秘暗号存储系统</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"], textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 15px; background: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background: #45a049; }
+        .nav { margin: 20px 0; }
+        .success { color: green; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>神秘暗号存储系统</h1>
+    
+    <div class="nav">
+        <a href="/">提交暗号</a> | 
+        <a href="/query">查询暗号</a>
+    </div>
+    
+    <h2>提交你的神秘暗号</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="secret_code">神秘暗号:</label>
+            <textarea id="secret_code" name="secret_code" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit">提交</button>
+    </form>
+    
+    {% if request.method == 'POST' %}
+    <div class="success">
+        暗号已成功保存到data文件夹！
+    </div>
+    {% endif %}
+</body>
+</html>
