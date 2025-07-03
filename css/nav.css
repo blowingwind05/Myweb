@@ -1,0 +1,49 @@
+nav .container {
+    background: transparent;
+    padding: 0 !important;
+    box-shadow: none;
+}
+
+h1, h2, h3 {
+    color: #35424a;
+    margin: 0 0 15px 0;
+}
+
+nav {
+    background: #e8491d; /* 橙色背景 */
+    padding: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav li {
+    padding: 0;
+    transition: all 0.3s ease;
+    position: relative; 
+}
+
+nav li:hover {
+    background: #35424a; /* 悬停时变为深蓝色背景 */
+}
+
+nav li a {
+    display: block; /* 让<a>变成块级元素 */
+    padding: 15px 25px; /* 把padding移到<a>上 */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+/* 当前页面高亮提示 */
+nav li a.current {
+    background: #35424a;
+}

@@ -1,0 +1,151 @@
+/* css/calculator.css */
+.calculator-section {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.calculator {
+    max-width: 300px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.calculator-display {
+    width: 100%; /* 继承父容器宽度 */
+    box-sizing: border-box; /* 重要！ */
+    margin-bottom: 15px;
+}
+
+.calculator-display input {
+    width: 100%;
+    box-sizing: border-box; /* 包含padding和border */
+    padding: 10px 15px;
+    font-size: 1.5em;
+    text-align: right;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "add subtract multiply divide"
+        "seven eight nine ac"
+        "four five six ac"
+        "one two three equal"
+        "zero zero dot equal";
+    gap: 10px; /* 改用gap属性更标准 */
+}
+
+.calculator-keys button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calculator-keys button:hover {
+    background-color: #e9e9e9;
+}
+
+.calculator-keys .operator {
+    background-color: #f0a500;
+    color: white;
+}
+
+.calculator-keys .operator.add {
+    grid-area: add;
+}
+
+.calculator-keys .operator.subtract {
+    grid-area: subtract;
+}
+
+.calculator-keys .operator.multiply {
+    grid-area: multiply;
+}
+
+.calculator-keys .operator.divide {
+    grid-area: divide;
+}
+
+.calculator-keys button[value="7"] {
+    grid-area: seven;
+}
+
+.calculator-keys button[value="8"] {
+    grid-area: eight;
+}
+
+.calculator-keys button[value="9"] {
+    grid-area: nine;
+}
+
+.calculator-keys button[value="4"] {
+    grid-area: four;
+}
+
+.calculator-keys button[value="5"] {
+    grid-area: five;
+}
+
+.calculator-keys button[value="6"] {
+    grid-area: six;
+}
+
+.calculator-keys button[value="1"] {
+    grid-area: one;
+}
+
+.calculator-keys button[value="2"] {
+    grid-area: two;
+}
+
+.calculator-keys button[value="3"] {
+    grid-area: three;
+}
+
+.calculator-keys button[value="0"] {
+    grid-area: zero;
+    grid-column: span 2; /* 横跨两列 */
+}
+
+.calculator-keys button[value="."] {
+    grid-area: dot;
+}
+
+.calculator-keys .all-clear {
+    grid-area: ac;
+    grid-row: span 2; /* 纵跨两行 */
+    background-color: #e74c3c;
+    color: white;
+}
+
+.calculator-keys .all-clear:hover {
+    background-color: #d62c1a;
+}
+
+.calculator-keys .equal-sign {
+    grid-area: equal;
+    grid-row: span 2; /* 纵跨两行 */
+    background-color: #2e86c0;
+    color: white;
+}
+
+.calculator-keys .equal-sign:hover {
+    background-color: #2778b0;
+}

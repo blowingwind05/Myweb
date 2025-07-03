@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的简单网页</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        /* 导航专用容器 - 去除白色背景 */
+        
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        
+        section {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        
+        article {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 3px solid #e8491d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>欢迎来到我的网站</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="#">服务</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <section>
+            <h2>欢迎</h2>
+            <p>这是一个简单的网页示例，展示了基本的HTML和CSS结构。您可以修改内容、添加更多部分或更改样式来创建您自己的网页。</p>
+        </section>
+        
+        <section>
+            <h2>最新消息</h2>
+            <article>
+                <h3>网站上线</h3>
+                <p>我们的新网站今天正式上线了！</p>
+            </article>
+            <article>
+                <h3>未来计划</h3>
+                <p>我们计划在未来添加更多功能和内容。</p>
+            </article>
+        </section>
+    </div>
+    
+    <div class="container">
+        <section class="calculator-section">
+            <h2>在线计算器</h2>
+            <div class="calculator">
+                <div class="calculator-display">
+                    <input type="text" id="display" readonly>
+                </div>
+                <div class="calculator-keys">
+                    <button type="button" class="operator" value="+">+</button>
+                    <button type="button" class="operator" value="-">-</button>
+                    <button type="button" class="operator" value="*">&times;</button>
+                    <button type="button" class="operator" value="/">&divide;</button>
+                    
+                    <button type="button" value="7">7</button>
+                    <button type="button" value="8">8</button>
+                    <button type="button" value="9">9</button>
+                    <button type="button" class="all-clear" value="AC">AC</button>
+                    
+                    <button type="button" value="4">4</button>
+                    <button type="button" value="5">5</button>
+                    <button type="button" value="6">6</button>
+                    
+                    <button type="button" value="1">1</button>
+                    <button type="button" value="2">2</button>
+                    <button type="button" value="3">3</button>
+                    <button type="button" class="equal-sign" value="=">=</button>
+                    
+                    <button type="button" value="0">0</button>
+                    <button type="button" class="decimal" value=".">.</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 我的网站. 保留所有权利.</p>
+    </footer>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
